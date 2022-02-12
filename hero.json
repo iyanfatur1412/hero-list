@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "name": "Satou Kazuma",
+        "attack": 40,
+        "defense": 50,
+        "hp": 700,
+        "mp": 200,
+        "type": "sword",
+        "voice": "kazuma.mp3"
+    },
+    {
+        "id": 2,
+        "name": "Aqua",
+        "attack": 40,
+        "defense": 60,
+        "hp": 1000,
+        "mp": 800,
+        "type": "wizard",
+        "voice": "aqua.mp3"
+    },
+    {
+        "id": 3,
+        "name": "Megumin",
+        "attack": 80,
+        "defense": 20,
+        "hp": 200,
+        "mp": 900,
+        "type": "wizard",
+        "voice": "megumin.mp3"
+    },
+    {
+        "id": 4,
+        "name": "Darkness",
+        "attack": 25,
+        "defense": 80,
+        "hp": 800,
+        "mp": 50,
+        "type": "crusader",
+        "voice": "darkness.mp3"
+    }
+]
