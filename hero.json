@@ -6,8 +6,16 @@
         "defense": 50,
         "hp": 700,
         "mp": 200,
+        "special_skill": {
+            "skill_1": "Lucky"
+        },
         "type": "sword",
-        "voice": "kazuma.mp3"
+        "image": {
+            "img_sm": "kazuma.jpg",
+            "img_lg": "kazuma_lg.jpg"
+        },
+        "voice": "kazuma.mp3",
+        "text": "Seorang cheater yang menggunakan pedang terkutuk untuk melawan seorang pemula yang hanya memiliki peralatan lemah itu jauh lebih pengecut!"
     },
     {
         "id": 2,
@@ -17,7 +25,12 @@
         "hp": 1000,
         "mp": 800,
         "type": "wizard",
-        "voice": "aqua.mp3"
+        "image": {
+            "img_sm": "aqua.jpg",
+            "img_lg": "aqua_lg.jpg"
+        },
+        "voice": "aqua.mp3",
+        "text": "Walaupun kehidupanmu singkat, Kamu tetap sudah mati."
     },
     {
         "id": 3,
@@ -27,7 +40,12 @@
         "hp": 200,
         "mp": 900,
         "type": "wizard",
-        "voice": "megumin.mp3"
+        "image": {
+            "img_sm": "megumin.jpg",
+            "img_lg": "megumin_lg.jpg"
+        },
+        "voice": "megumin.mp3",
+        "text": "Kita ini teman kan? Persahabatan itu adalah tempat saling berbagi rasa sakit"
     },
     {
         "id": 4,
@@ -37,6 +55,185 @@
         "hp": 800,
         "mp": 50,
         "type": "crusader",
-        "voice": "darkness.mp3"
+        "image": {
+            "img_sm": "darkness.jpg",
+            "img_lg": "darkness_lg.jpg"
+        },
+        "voice": "darkness.mp3",
+        "text": "Melindungi rakyat adalah tugas dan kehormatanku."
+    },
+    {
+        "id": 5,
+        "name": "Yunyun",
+        "attack": 57,
+        "defense": 38,
+        "hp": 600,
+        "mp": 600,
+        "type": "wizard",
+        "image": {
+            "img_sm": "yunyun.png",
+            "img_lg": "yunyun_lg.jpg"
+        },
+        "voice": "yunyun.mp3",
+        "text": "Namaku Yunyun! Penyihir hebat dan menguasai sihir tingkat lanjut! Juga suatu hari nanti akan memimpin suku Iblis Merah Tua"
+    },
+    {
+        "id": 6,
+        "name": "Rokugo",
+        "attack": 40,
+        "defense": 50,
+        "hp": 400,
+        "mp": 0,
+        "special_skill": {
+            "skill_1": "Seiken Gensou"
+        },
+        "type": "robot",
+        "image": {
+            "img_sm": "rokugo.jpg",
+            "img_lg": "rokugo_lg.jpg"
+        },
+        "voice": "rokugo.mp3",
+        "text": "Apa boleh buat jika putri yang meminta. Bu-bukan berarti aku membantumu karena kau cantik ya!"
+    },
+    {
+        "id": 7,
+        "name": "Alice",
+        "attack": 70,
+        "defense": 20,
+        "hp": 500,
+        "mp": 0,
+        "special_skill": {
+            "skill_1": "Jibaku Kiro"
+        },
+        "type": "robot",
+        "image": {
+            "img_sm": "alice.jpg",
+            "img_lg": "alice_lg.jpg"
+        },
+        "voice": "alice.mp3",
+        "text": "Android tipe gadis cantik berspesifikasi tinggi, Kisaragi Alice"
+    },
+    {
+        "id": 8,
+        "name": "Snow",
+        "attack": 20,
+        "defense": 30,
+        "hp": 500,
+        "mp": 0,
+        "type": "sword",
+        "image": {
+            "img_sm": "snow.jpg",
+            "img_lg": "snow_lg.jpg"
+        },
+        "voice": "snow.mp3",
+        "text": "Aku akan memenggalmu dengan Flame Zapper milikku ini!"
+    },
+    {
+        "id": 9,
+        "name": "Rose",
+        "attack": 40,
+        "defense": 30,
+        "hp": 500,
+        "mp": 300,
+        "type": "mutan",
+        "image": {
+            "img_sm": "rose.jpg",
+            "img_lg": "rose_lg.jpg"
+        },
+        "voice": "rose.mp3",
+        "text": "Aku Rose. Benar, chimera tempur buatan Rose. Apa kalian bisa menanganiku? "
+    },
+    {
+        "id": 10,
+        "name": "Grimm",
+        "attack": 90,
+        "defense": 5,
+        "hp": 50,
+        "mp": 700,
+        "type": "wizard",
+        "image": {
+            "img_sm": "grimm.jpg",
+            "img_lg": "grimm_lg.jpg"
+        },
+        "voice": "grimm.mp3",
+        "text": "Hey boy, kamu penasaran dengan isi rok kakakmu ini kan?!"
+    },
+    {
+        "id": 11,
+        "name": "Saitama",
+        "attack": "~",
+        "defense": "~",
+        "hp": 1000,
+        "mp": 0,
+        "type": "punch",
+        "image": {
+            "img_sm": "saitama.png",
+            "img_lg": "saitama_lg.jpg"
+        },
+        "voice": "saitama.mp3",
+        "text": "Sepertinya kau bisa memberikan apa yang kuinginkan ya!"
+    },
+    {
+        "id": 12,
+        "name": "Genos",
+        "attack": "80",
+        "defense": "60",
+        "hp": 650,
+        "mp": 0,
+        "type": "robot",
+        "image": {
+            "img_sm": "genos.png",
+            "img_lg": "genos_lg.jpg"
+        },
+        "voice": "genos.mp3",
+        "text": "Aku akan membasmimu! jangan bergerak dari situ."
+    },
+    {
+        "id": 13,
+        "name": "Bang",
+        "attack": "85",
+        "defense": "80",
+        "hp": 600,
+        "mp": 0,
+        "type": "punch",
+        "image": {
+            "img_sm": "bang.png",
+            "img_lg": "bang_lg.jpg"
+        },
+        "voice": "bang.mp3",
+        "text": "Pukulan aliran air penghancur batu! Kau tahu itu?!"
+    },
+    {
+        "id": 14,
+        "name": "Kirito",
+        "attack": "70",
+        "defense": "40",
+        "hp": 600,
+        "mp": 200,
+        "special_skill": {
+            "skill_1": "Double Sword"
+        },
+        "type": "sword",
+        "image": {
+            "img_sm": "kirito.png",
+            "img_lg": "kirito_lg.jpg"
+        },
+        "voice": "kirito.mp3",
+        "text": "Aku adalah seorang Beater. Mulai sekarang jangan bandingkan aku dengan para tester lainnya!"
+    },
+    {
+        "id": 15,
+        "name": "Asuna",
+        "attack": "70",
+        "defense": "40",
+        "hp": 600,
+        "mp": 250,
+        "type": "sword",
+        "image": {
+            "img_sm": "asuna.png",
+            "img_lg": "asuna_lg.jpg"
+        },
+        "voice": "asuna.mp3",
+        "text": "Hahh.. Kamu rakus sekali ya?! Aku bisa membuatkannya untukmu kapanpun..."
     }
 ]

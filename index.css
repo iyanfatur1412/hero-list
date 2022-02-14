@@ -29,6 +29,9 @@
     width: 100vw;
     height: 100vh;
     position: relative;
+    background: url(bahan/bg.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
 .loading-bar {
@@ -39,10 +42,52 @@
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
-    font-size: .9em;
+    font-size: 1.1em;
+    color: #fff;
 }
 
 .loading {
     width: 100%;
     margin-bottom: 10px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: 5px;
 }
+
+.loading::-webkit-progress-value {
+    background: rgb(255, 50, 50);
+}
+
+
+@media (max-width: 1024px) and (orientation: portrait){ /* tablet and smaller */
+    body:after{
+      position: absolute;
+      z-index: 9999;
+      width: 100%;
+      top: 0;
+      bottom: 0;
+      content: "And Refresh";
+      background: #212121 url(http://i.stack.imgur.com/sValK.png) 0 0 no-repeat; /* replace with an image that tells the visitor to rotate the device to landscape mode */
+      background-size: 100% auto;
+      background-position: center;
+      opacity: 0.95;
+    }
+  }
+
+  @media (min-width: 1024px) {
+      body::after {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: rgba(0, 0, 0, .8);
+          z-index: 999;
+          font-size: 3em;
+          display: flex;
+          color: #fff;
+          justify-content: center;
+          align-items: center;
+          content: "Only Mobile Device";
+      }   
+  }

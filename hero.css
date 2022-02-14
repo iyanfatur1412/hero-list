@@ -41,9 +41,9 @@
     width: 100%;
     padding: 20px;
     background-color: brown;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    align-content: flex-start;
 }
 
 .hero-bar::-webkit-scrollbar {
@@ -94,14 +94,32 @@
     font-size: 2em;
     padding: 0 20px;
     border-radius: 0 10px 10px 0;
-    background-color: aqua;
+    background-color: brown;
+    cursor: pointer;
 }
 
 .detail-hero .header {
+    width: 250px;
     position: absolute;
     top: 20px;
     left: 20px;
     text-transform: capitalize;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, .4);
+}
+
+.detail-hero .header h3 {
+    margin-bottom: 8px;
+}
+
+.detail-hero .header h3::after {
+    content: "";
+    width: 40%;
+    height: 3px;
+    background-color: #fff;
+    display: block;
+    margin-top: 5px;
 }
 
 .detail-hero .image {
@@ -118,39 +136,38 @@
 .detail-hero .col-speech {
     width: 100%;
     height: 100px;
-    background-color: #acac;
+    background-color: rgba(0, 0, 0, .5);
     padding: 20px;
     position: absolute;
     bottom: 0;
+    letter-spacing: 1px;
 }
 
 .detail-hero .col-info {
-    width: 20%;
+    width: 30%;
     height: 200px;
     overflow-y: scroll;
     position: absolute;
     top: 20px;
     right: 20px;
     padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, .4);
 }
 
-.col-info::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background-color: rgb(70, 70, 70);
-    filter: blur(20px);
-    border-radius: 20px;
+.col-info::-webkit-scrollbar {
+    width: 0;
+}
+
+.col-info h4 {
+    text-align: center;
 }
 
 .detail-hero ul {
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
+    margin-top: 10px;
 }
 
 .detail-hero ul li {
@@ -179,3 +196,36 @@
         opacity: 1;
     }
 }
+
+
+@media (max-width: 1024px) and (orientation: portrait){ /* tablet and smaller */
+    body:after{
+      position: absolute;
+      z-index: 9999;
+      width: 100%;
+      top: 0;
+      bottom: 0;
+      content: "";
+      background: #212121 url(http://i.stack.imgur.com/sValK.png) 0 0 no-repeat; /* replace with an image that tells the visitor to rotate the device to landscape mode */
+      background-size: 100% auto;
+      background-position: center;
+    }
+  }
+
+  @media (min-width: 1024px) {
+      body::after {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: rgba(0, 0, 0, .8);
+          z-index: 999;
+          font-size: 3em;
+          display: flex;
+          color: #fff;
+          justify-content: center;
+          align-items: center;
+          content: "Only Mobile Device";
+      }   
+  }

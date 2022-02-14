@@ -8,8 +8,9 @@ let info = `
     </div>
 `
 
-if(window.innerWidth >= 768) {
-
+if(window.innerHeight > window.innerWidth || window.innerWidth > 1024) {
+    console.log("Only Device Mobile and Landscape mode");
+}else {
     let loadingInterval = setInterval(() => {
         if(loadingValue >= 100) {
             clearInterval(loadingInterval);
@@ -20,10 +21,4 @@ if(window.innerWidth >= 768) {
             loadingNumber.innerHTML = `${loadingValue}%`;
         }
     }, 200)
-
-    
-
-}else {
-    const body = document.querySelector("body");
-    body.innerHTML = info;
 }

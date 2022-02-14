@@ -79,9 +79,10 @@ function detailHero() {
                 url: "hero.json",
                 success: data => {
                     elDetailHero.innerHTML = showDetailHero(filterHeroId(data, this.dataset.id)[0]);
+                    typing(filterHeroId(data, this.dataset.id)[0].text);
                     elDetailHero.classList.toggle("show");
                     colAudio.innerHTML = setAudio(filterHeroId(data, this.dataset.id)[0]);
-                    playAudio()
+                    playAudio();
                     const close = document.querySelector(".close");
                     close.addEventListener("click", function() {
                         elDetailHero.classList.toggle("show");
@@ -95,15 +96,13 @@ function detailHero() {
 
 function setAudio(data) {
     return `
-        <audio src="bahan/${data.voice}"></audio>
+        <audio src="bahan/voice/${data.voice}"></audio>
     `
 }
 
 function playAudio() {
     const audio = document.querySelector("audio");
-    setTimeout(() => {
-        audio.play();
-    }, 2000);
+    audio.play();
 }
 
 function pauseAudio() {
@@ -128,7 +127,7 @@ function showHero(data) {
     return `
         <figure class="hero" data-id=${data.id}>
             <div class="hero-img">
-                <img src="bahan/ninym.png" alt="">
+                <img src="bahan/hero-image/${data.image.img_sm}" alt="">
             </div>
             <figcaption>${data.name}</figcaption>
         </figure>
@@ -146,21 +145,26 @@ function showDetailHero(data) {
             <p>${data.type}</p>
         </div>
         <div class="image">
-            <img src="bahan/ninym.png" alt="">
+            <img src="bahan/image_lg/${data.image.img_lg}" alt="">
         </div>
         <div class="col-speech">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit facilis at distinctio deserunt consequatur debitis, rerum quo explicabo? Repudiandae, necessitatibus?</p>
+            <p class="speech"></p>
         </div>
         <div class="col-info">
+            <h4>Skill Character</h4>
             <ul>
                 <li>Attack</li>
-                <li>${data.attack}</li>
+                <li>${data.attack}/100</li>
                 <li>Defense</li>
-                <li>${data.defense}</li>
+                <li>${data.defense}/100</li>
                 <li>Hp</li>
-                <li>${data.hp}</li>
+                <li>${data.hp}/1000</li>
                 <li>Mp</li>
-                <li>${data.mp}</li>
+                <li>${data.mp}/1000</li>
+                ${data.special_skill ? `
+                    <li>Special Skill</li>
+                    <li>${data.special_skill.skill_1}</li>
+                ` : ``}
             </ul>
         </div>
     </div>
@@ -181,4 +185,19 @@ function ajax(obj) {
     }
     xhr.open("get", obj.url);
     xhr.send();
+}
+
+function typing(teks) {
+    let index = 1;
+   const speechs = document.querySelector(".speech");
+
+    let typed = setInterval(() => {
+        if(index > teks.length) {
+            clearInterval(typed);
+        }else {
+            let subTeks = teks.substring(0, index);
+            speechs.innerHTML = subTeks;
+            index++;
+        }
+    }, 30)
 }
